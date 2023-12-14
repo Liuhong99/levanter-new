@@ -7,7 +7,8 @@ data:
   tokenizer: "meta-llama/Llama-2-70b-hf"
 model:
   type: llama
-  hidden_dim: 2304
+  hidden_dim: 768
+  intermediate_dim: 2304
   num_heads: 12
   num_layers: 12
   seq_len: 16384
@@ -22,3 +23,7 @@ trainer:
   train_batch_size: 1024
   num_train_steps: 100000
   steps_per_eval: 500
+optimizer:
+  learning_rate: 3E-3
+  weight_decay: 0.1
+  min_lr_ratio: 0.1
