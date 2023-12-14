@@ -209,7 +209,7 @@ class LlamaRotaryEmbedding(eqx.Module, StateDictSerializationMixin):
     cos_cached: NamedArray
     sin_cached: NamedArray
 
-    def __init__(self, HeadSize: Axis, Pos: Axis, base: int = 10000):
+    def __init__(self, HeadSize: Axis, Pos: Axis, base: int = 1000000):
         self.Pos = Pos
         # this must be compile-time b/c we want to store them in a static field
         with jax.ensure_compile_time_eval():
