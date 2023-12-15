@@ -10,9 +10,7 @@ model:
   hidden_dim: 768
   intermediate_dim: 2304
   num_heads: 12
-  num_layers: 12
-  seq_len: 16384
-  num_heads: 12
+  seq_len: 8192
   gradient_checkpointing: True
 
 trainer:
