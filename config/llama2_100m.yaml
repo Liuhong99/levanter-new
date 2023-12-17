@@ -5,8 +5,10 @@ model:
   intermediate_dim: 2304
   num_heads: 12
   num_layers: 12
-  seq_len: 8192
+  seq_len: 4096
   gradient_checkpointing: True
+  use_flash_attention: True
+  flash_attention_block_size: 1024
 
 trainer:
   wandb:
@@ -20,3 +22,4 @@ optimizer:
   learning_rate: 3E-3
   weight_decay: 0.1
   min_lr_ratio: 0.1
+  beta2: 0.95
