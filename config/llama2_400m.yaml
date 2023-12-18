@@ -1,5 +1,4 @@
-data: !include data/dolma_source.yaml
-  cache_dir: "gs://levanter-data-new/tokenized/dolma_large/"
+data: !include data/dolma_source_large.yaml
 model:
   type: llama
   hidden_dim: 1536
@@ -19,7 +18,7 @@ trainer:
   train_batch_size: 1024
   num_train_steps: 1000_000
   steps_per_eval: 1000
-  
+
 optimizer:
   learning_rate: 1.2E-3
   weight_decay: 0.1

@@ -7357,5 +7357,5 @@ train_urls:
   - "gs://levanter-data-new/processed/dolma/stack-code/zimpl/v3-0000.jsonl.zst"
 validation_urls:
   - "gs://levanter-data-new/processed/dolma/val.jsonl.zst"
-cache_dir: "gs://levanter-data-new/tokenized/dolma/"
+cache_dir: "gs://levanter-data-new/tokenized/dolma-large/"
 tokenizer: "meta-llama/Llama-2-70b-hf"
