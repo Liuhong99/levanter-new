@@ -1,4 +1,5 @@
 data: !include data/dolma_source.yaml
+  cache_dir: "gs://levanter-data-new/tokenized/dolma_large/"
 model:
   type: llama
   hidden_dim: 1536
