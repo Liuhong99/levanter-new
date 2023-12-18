@@ -1,0 +1,26 @@
+data: !include data/dolma_source.yaml
+model:
+  type: llama
+  hidden_dim: 1536
+  intermediate_dim: 4608
+  num_heads: 12
+  num_layers: 16
+  seq_len: 4096
+  gradient_checkpointing: True
+  use_flash_attention: True
+  flash_attention_block_size: 1024
+
+trainer:
+  wandb:
+    project: "llama-400m"
+    tags: ["dolma", "llama_400m"]
+  mp: p=f32,c=bfloat16
+  train_batch_size: 1024
+  num_train_steps: 1000_000
+  steps_per_eval: 1000
+  
+optimizer:
+  learning_rate: 1.2E-3
+  weight_decay: 0.1
+  min_lr_ratio: 0.1
+  beta2: 0.95
